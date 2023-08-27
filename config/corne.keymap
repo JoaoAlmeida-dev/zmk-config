@@ -44,7 +44,7 @@
         };
         escalttab: alt_tab_esc  {
             compatible = "zmk,behavior-mod-morph";
-            label = "";
+            label = "ESC_ALTTAB";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp TAB>;
             mods = <(MOD_LALT|MOD_RALT)>;
