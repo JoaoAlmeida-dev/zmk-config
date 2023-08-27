@@ -68,8 +68,8 @@
 // | SHFT       |  A         |  S         |  D         |  F         |  G         |   |  H         |  J         |  K         |  L         |  ;         |  '         |
    &sk LSHIFT   &kp A        &kp S        &kp D        &kp F        &kp G            &kp H        &kp J        &kp K        &kp L        &kp SEMI     &kp SQT
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// | CTRL       |  Z         |  X         |  C         |  V         |  B         |   |  N         |  M         |  ,         |  .         |            | ESC        |
-   &kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B            &kp N        &kp M        &kp COMMA    &kp DOT      &trans       &kp ESC
+// | CTRL       |  Z         |  X         |  C         |  V         |  B         |   |  N         |  M         |  ,         |  .         |            |            |
+   &kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B            &kp N        &kp M        &kp COMMA    &kp DOT      &trans       &trans
 // ╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┴────────────┴────────────╯
 //                                        | ALT        | LWR        | SPC        |   | ENT        | RSE        | GUI        |
                                           &kp LALT     &lt LOWER HOME &kp SPACE      &kp RET     &lt RAISE END &kp LGUI
