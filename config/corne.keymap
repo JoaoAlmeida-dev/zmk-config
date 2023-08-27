@@ -101,10 +101,10 @@
                         bindings = <
 // ╭─────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
 // | \"|"        |  !         |  @         |  #         |  $         |  %         |   |  &         |  (         |  )         |  =         | '?         |            |
-   &kp bslshpipe &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT         &kp AMPS    &kp LPAR     &kp RPAR     &kp EQUAL    &aposqmark   &trans
+   &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT         &kp AMPS    &kp LPAR     &kp RPAR     &kp EQUAL    &aposqmark   &trans
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // | SHIFT       | BT1        | BT2        | BT3        | BT4        |BTCLR       |   |  -         |  [         |  ]         |  *         | ´`         |  `         |
-   &sk LSHIFT    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR       &kp MINUS    &kp LBKT     &kp RBKT  &kp KP_MULTIPLY &kp BSLH      &kp GRAVE
+   &sk LSHIFT    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR       &kp MINUS    &kp LBKT     &kp RBKT    &kp KP_MULTIPLY &kp BSLH   &kp GRAVE
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // | CTRL        |            |            |            |            |            |   |  _         |  {         |  }         |  +         | ºª         |  ~         |
    &kp LCTRL     &trans      &trans        &trans       &trans       &trans           &kp UNDER    &kp LBRC     &kp RBRC     &kp PLUS     &kp PIPE     &kp TILDE
