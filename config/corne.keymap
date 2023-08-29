@@ -50,13 +50,21 @@
             mods = <(MOD_LALT|MOD_RALT)>;
             keep-mods = <(MOD_LALT|MOD_RALT)>;
         };
-        shiftcaps: shift_caps_dance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
+        shiftminus: shift_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_MINUS";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LSHIFT>, <&kt CAPSLOCK>;
+            bindings = <&kp MINUS>, <&kp UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        shiftplus: shift_plus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_PLUS";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp KP_MULTIPLY>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        
     };
 };
 
@@ -75,13 +83,14 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+                  label="DEF";
                         bindings = <
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
 // | ESC ALTTAB |  Q         |  W         |  E         |  R         |  T         |   |  Y         |  U         |  I         |  O         |  P         | BKSP       |
    &escalttab      &kp Q        &kp W        &kp E        &kp R        &kp T            &kp Y        &kp U        &kp I        &kp O        &kp P        &bspcdel
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// |SHFT + CAPS |  A         |  S         |  D         |  F         |  G         |   |  H         |  J         |  K         |  L         |  ;         |  '         |
-   &shiftcaps   &kp A        &kp S        &kp D        &kp F        &kp G            &kp H        &kp J        &kp K        &kp L        &kp SEMI     &kp SQT
+// |SHIFT       |  A         |  S         |  D         |  F         |  G         |   |  H         |  J         |  K         |  L         |  ;         |  '         |
+   &kp LSHIFT   &kp A        &kp S        &kp D        &kp F        &kp G            &kp H        &kp J        &kp K        &kp L        &kp SEMI     &kp SQT
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // | CTRL       |  Z         |  X         |  C         |  V         |  B         |   |  N         |  M         |  ,         |  .         |            |            |
    &kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B            &kp N        &kp M        &kp COMMA    &kp DOT      &trans       &trans
@@ -95,13 +104,14 @@
                         >;
                 };
                 lower_layer {
+                  label="LOWER";
                         bindings = <
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
 // | TAB        |  1         |  2         |  3         |  4         |  5         |   |  6         |  7         | 8          |  9         |  0         |            |
    &kp TAB      &kp N1       &kp N2       &kp N3       &kp N4       &kp N5           &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// | SHFT       | LFT        | DWN        | UP         | RGT        |            |   | LFT        | DWN        | UP         | RGT        |            | F12        |
-   &sk LSHIFT   &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT       &trans           &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans       &kp F12
+// | CAPS       | LFT        | DWN        | UP         | RGT        |            |   | LFT        | DWN        | UP         | RGT        |            | F12        |
+   &kt CAPS     &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT       &trans           &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans       &kp F12
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // | CTRL       | F1         | F2         | F3         | F4         | F5         |   | F6         | F7         | F8         | F9         | F10        | F11        |
    &kp LCTRL    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5           &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      &kp F11
@@ -113,16 +123,17 @@
                 };
 
                 raise_layer {
+                  label="HIGHER";
                         bindings = <  
 // ╭─────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
 // | \"|"        |  !         |  @         |  #         |  $         |  %         |   |  &         |  (         |  )         |  =         | '?         |            |
    &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT         &kp AMPS    &kp LPAR     &kp RPAR     &kp EQUAL    &aposqmark   &trans
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// | SHIFT       | BT1        | BT2        | BT3        | BT4        |BTCLR       |   |  -         |  [         |  ]         |  *         | ´`         |  `         |
-   &sk LSHIFT    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR       &kp MINUS    &kp LBKT     &kp RBKT    &kp KP_MULTIPLY &kp FSLH   &kp GRAVE
+// | SHIFT       | BT1        | BT2        | BT3        | BT4        |BTCLR       |   |  -   _     |  [         |  ]         |  + *       | ´`         |  `         |
+   &sk LSHIFT    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR       &shiftminus    &kp LBKT     &kp RBKT    &shiftplus &kp FSLH   &kp GRAVE
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// | CTRL        |            |            |            |            |            |   |  _         |  {         |  }         |  +         | ºª         |  ~         |
-   &kp LCTRL     &trans      &trans        &trans       &trans       &trans           &kp UNDER    &kp LBRC     &kp RBRC     &kp PLUS     &kp PIPE     &kp TILDE
+// | CTRL        |            |            |            |            |            |   |            |  {         |  }         |            | ºª         |  ~         |
+   &kp LCTRL     &trans      &trans        &trans       &trans       &trans           &trans    &kp LBRC     &kp RBRC     &trans     &kp PIPE     &kp TILDE
 // ╰─────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┴────────────┴────────────╯
 //                                         | ALT        | LWR        | SPC        |   | ENT        | RSE        | GUI        |
                                            &trans       &trans       &trans           &trans       &trans       &trans
@@ -131,6 +142,7 @@
                 };
 
                 third_layer {
+                  label="THIRD";
                         bindings = <
 // ╭─────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────────┬────────────┬────────────┬────────────┬────────────╮
 // |C_BRI_DEC    |C_BRI_UP    |C_MUTE      |C_VOL_DN    |C_VOL_UP    |            |   |C_PREV      |C_PLAY_PAUSE    |   C_NEXT   |            |            |            |
