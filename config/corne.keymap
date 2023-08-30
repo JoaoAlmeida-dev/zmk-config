@@ -64,6 +64,20 @@
             bindings = <&kp PLUS>, <&kp KP_MULTIPLY>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        shftmod: shift_mod{
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_MOD";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        }
+        altmod: alt_mod{
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_MOD";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        }
         
     };
 };
@@ -125,19 +139,19 @@
                 raise_layer {
                   label="HIGHER";
                         bindings = <  
-// ╭─────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
-// | \"|"        |  !         |  @         |  #         |  $         |  %         |   |  &         |  (         |  )         |  =         | '?         |            |
-   &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT         &kp AMPS    &kp LPAR     &kp RPAR     &kp EQUAL    &aposqmark   &trans
-// ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// | SHIFT       | BT1        | BT2        | BT3        | BT4        |BTCLR       |   |  -   _     |  [         |  ]         |  + *       | ´`         |  `         |
-   &sk LSHIFT    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR       &shiftminus    &kp LBKT     &kp RBKT    &shiftplus &kp FSLH   &kp GRAVE
-// ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// | CTRL        |            |            |            |            |            |   |            |  {         |  }         |            | ºª         |  ~         |
-   &kp LCTRL     &trans      &trans        &trans       &trans       &trans           &trans    &kp LBRC     &kp RBRC     &trans     &kp PIPE     &kp TILDE
-// ╰─────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┴────────────┴────────────╯
-//                                         | ALT        | LWR        | SPC        |   | ENT        | RSE        | GUI        |
-                                           &trans       &trans       &trans           &trans       &trans       &trans
-//                                         ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯ 
+// ╭─────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬──────────────────┬──────────────────┬──────────────────┬───────────────────┬────────────╮
+// | \"|"        |  !         |  @         |  #         |  $         |  %         |   |  &         |  /    {          |     [   (        |    )  ]          |   = }             |            |
+   &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT         &kp AMPS    &altmod FSLH LBRC  &altmod LPAR LBKT  &altmod RPAR RBKT  &altmod EQUALS RBRC &trans
+// ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼──────────────────┼──────────────────┼──────────────────┼───────────────────┼────────────┤
+// | SHIFT       | BT1        | BT2        | BT3        | BT4        |BTCLR       |   |            |                  |                  |    '?            | ´`                |  `         |
+   &kp LSHIFT    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR       &trans       &trans             &trans             &aposqmark         &kp FSLH            &kp GRAVE
+// ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼──────────────────┼──────────────────┼──────────────────┼───────────────────┼────────────┤
+// | CTRL        |            |            |  + *       | -   _      |  =         |   |            |                  |  ;               |   :              | ºª                |  ~         |
+   &kp LCTRL     &trans      &trans        &shiftplus   &shiftminus  &kp EQUA         &trans       &trans             &kp SEMICOLON      &kp colon          &kp PIPE            &kp TILDE
+// ╰─────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼──────────────────┼──────────────────┼──────────────────┴───────────────────┴────────────╯
+//                                         | ALT        | LWR        | SPC        |   | ENT        | RSE              | GUI              |
+                                           &trans       &trans       &trans           &trans       &trans             &trans
+//                                         ╰────────────┴────────────┴────────────╯   ╰────────────┴──────────────────┴──────────────────╯ 
                         >;
                 };
 
