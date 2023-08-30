@@ -70,14 +70,14 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        }
+        };
         altmod: alt_mod{
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_MOD";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
             mods = <(MOD_LALT|MOD_RALT)>;
-        }
+        };
         
     };
 };
