@@ -19,6 +19,15 @@
     /delete-property/ ignore-modifiers;
 };
 
+#define MAKE_MOD(NAME, MOD, BINDING1, BINDING2)\
+        NAME: NAME { \
+            compatible = "zmk,behavior-mod-morph"; \
+            label = "NAME"; \
+            #binding-cells = <0>; \
+            bindings = <&kp BINDING1>, <&kp BINDING2>; \
+            mods = <(MOD)>; \
+        };
+
 / {
     behaviors {
         bspcdel: bspc_del {
@@ -78,6 +87,10 @@
             bindings = <&kp>, <&kp>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
+        MAKE_MOD( raiseseven ,MOD_LSFT|MOD_RSFT, FSLH, LBRC);
+        MAKE_MOD( raiseeight ,MOD_LSFT|MOD_RSFT, LPAR, LBKT);
+        MAKE_MOD( raisenine ,MOD_LSFT|MOD_RSFT, RPAR, RBKT);
+        MAKE_MOD( raisezero ,MOD_LSFT|MOD_RSFT, EQUALS, RBRC);
         
     };
 };
@@ -141,7 +154,7 @@
                         bindings = <  
 // ╭─────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬──────────────────┬──────────────────┬──────────────────┬───────────────────┬────────────╮
 // | \"|"        |  !         |  @         |  #         |  $         |  %         |   |  &         |  /    {          |     [   (        |    )  ]          |   = }             |            |
-   &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT         &kp AMPS    &altmod FSLH LBRC  &altmod LPAR LBKT  &altmod RPAR RBKT  &altmod EQUALS RBRC &trans
+   &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT         &kp AMPS    &raiseseven        &raiseeight        &raisenine         &raisezero          &trans
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼──────────────────┼──────────────────┼──────────────────┼───────────────────┼────────────┤
 // | SHIFT       |            |            |            |            |            |   |            |                  |                  |    '?            | ´`                |  `         |
    &kp LSHIFT    &trans       &trans       &trans       &trans       &trans           &trans       &trans             &trans             &aposqmark         &kp FSLH            &kp GRAVE
