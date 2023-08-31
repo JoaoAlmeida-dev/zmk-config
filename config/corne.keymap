@@ -78,10 +78,10 @@
             bindings = <&kp PLUS>, <&kp KP_MULTIPLY>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        MAKE_MOD( raiseseven ,MOD_LSFT|MOD_RSFT, FSLH, LBRC)
-        MAKE_MOD( raiseeight ,MOD_LSFT|MOD_RSFT, LPAR, LBKT)
-        MAKE_MOD( raisenine ,MOD_LSFT|MOD_RSFT, RPAR, RBKT)
-        MAKE_MOD( raisezero ,MOD_LSFT|MOD_RSFT, EQUALS, RBRC)
+        MAKE_MOD(raiseseven,MOD_LSFT|MOD_RSFT,FSLH,LBRC)
+        MAKE_MOD(raiseeight,MOD_LSFT|MOD_RSFT,LPAR,LBKT)
+        MAKE_MOD(raisenine,MOD_LSFT|MOD_RSFT,RPAR,RBKT)
+        MAKE_MOD(raisezero,MOD_LSFT|MOD_RSFT,EQUALS,RBRC)
         
     };
 };
