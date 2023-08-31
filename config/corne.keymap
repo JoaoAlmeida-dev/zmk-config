@@ -19,7 +19,7 @@
     /delete-property/ ignore-modifiers;
 };
 
-#define MAKE_MOD(NAME, MOD, BINDING1, BINDING2)\
+#define MAKE_MOD(NAME, MOD, BINDING1, BINDING2) \
         NAME: NAME { \
             compatible = "zmk,behavior-mod-morph"; \
             label = "NAME"; \
@@ -73,17 +73,24 @@
             bindings = <&kp PLUS>, <&kp KP_MULTIPLY>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        shftmod: shift_mod{
+      //  shftmod: shift_mod{
+      //      compatible = "zmk,behavior-mod-morph";
+      //      label = "SHIFT_MOD";
+      //      #binding-cells = <0>;
+      //      bindings = <&kp>, <&kp>;
+      //      mods = <(MOD_LSFT|MOD_RSFT)>;
+      //  };
+      //  altmod: alt_mod{
+      //      compatible = "zmk,behavior-mod-morph";
+      //      label = "ALT_MOD";
+      //      #binding-cells = <0>;
+      //      bindings = <&kp>, <&kp>;
+      //      mods = <(MOD_LALT|MOD_RALT)>;
+      //  };
+        raiseseven: raiseseven{
             compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_MOD";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        altmod: alt_mod{
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_MOD";
-            #binding-cells = <2>;
+            label = "raiseseven";
+            #binding-cells = <0>;
             bindings = <&kp>, <&kp>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
