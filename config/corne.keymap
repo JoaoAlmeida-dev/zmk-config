@@ -21,7 +21,7 @@
 #define ZMK_HELPER_STRINGIFY(x) #x
 
 #define MAKE_MOD(NAME, MOD, BINDING1, BINDING2) \
-        / { \
+    / { \
         behaviors { \
             NAME: NAME { \
                 compatible = "zmk,behavior-mod-morph"; \
@@ -29,9 +29,14 @@
                 #binding-cells = <0>; \
                 bindings = <&kp BINDING1>, <&kp BINDING2>; \
                 mods = <(MOD)>; \
-                };\
             };\
-        };
+        };\
+    };
+
+MAKE_MOD(raiseseven,MOD_LSFT|MOD_RSFT,FSLH,LBRC)
+MAKE_MOD(raiseeight,MOD_LSFT|MOD_RSFT,LPAR,LBKT)
+MAKE_MOD(raisenine,MOD_LSFT|MOD_RSFT,RPAR,RBKT)
+MAKE_MOD(raisezero,MOD_LSFT|MOD_RSFT,EQUALS,RBRC)
 
 / {
     behaviors {
@@ -77,12 +82,7 @@
             #binding-cells = <0>;
             bindings = <&kp PLUS>, <&kp KP_MULTIPLY>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        MAKE_MOD(raiseseven,MOD_LSFT|MOD_RSFT,FSLH,LBRC)
-        MAKE_MOD(raiseeight,MOD_LSFT|MOD_RSFT,LPAR,LBKT)
-        MAKE_MOD(raisenine,MOD_LSFT|MOD_RSFT,RPAR,RBKT)
-        MAKE_MOD(raisezero,MOD_LSFT|MOD_RSFT,EQUALS,RBRC)
-        
+        };        
     };
 };
 
