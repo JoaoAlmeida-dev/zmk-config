@@ -87,9 +87,9 @@
       //      bindings = <&kp>, <&kp>;
       //      mods = <(MOD_LALT|MOD_RALT)>;
       //  };
-        raiseseven: raiseseven{
+        raiseseventest: raiseseventest{
             compatible = "zmk,behavior-mod-morph";
-            label = "raiseseven";
+            label = "raiseseventest";
             #binding-cells = <0>;
             bindings = <&kp>, <&kp>;
             mods = <(MOD_LALT|MOD_RALT)>;
