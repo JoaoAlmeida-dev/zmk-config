@@ -18,14 +18,19 @@
     quick-release;
     /delete-property/ ignore-modifiers;
 };
+#define ZMK_HELPER_STRINGIFY(x) #x
 
 #define MAKE_MOD(NAME, MOD, BINDING1, BINDING2) \
-        NAME: NAME { \
-            compatible = "zmk,behavior-mod-morph"; \
-            label = "NAME"; \
-            #binding-cells = <0>; \
-            bindings = <&kp BINDING1>, <&kp BINDING2>; \
-            mods = <(MOD)>; \
+        / { \
+        behaviors { \
+            NAME: NAME { \
+                compatible = "zmk,behavior-mod-morph"; \
+                label = ZMK_HELPER_STRINGIFY(ZB_ ## NAME); \
+                #binding-cells = <0>; \
+                bindings = <&kp BINDING1>, <&kp BINDING2>; \
+                mods = <(MOD)>; \
+                };\
+            };\
         };
 
 / {
@@ -73,31 +78,10 @@
             bindings = <&kp PLUS>, <&kp KP_MULTIPLY>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-      //  shftmod: shift_mod{
-      //      compatible = "zmk,behavior-mod-morph";
-      //      label = "SHIFT_MOD";
-      //      #binding-cells = <0>;
-      //      bindings = <&kp>, <&kp>;
-      //      mods = <(MOD_LSFT|MOD_RSFT)>;
-      //  };
-      //  altmod: alt_mod{
-      //      compatible = "zmk,behavior-mod-morph";
-      //      label = "ALT_MOD";
-      //      #binding-cells = <0>;
-      //      bindings = <&kp>, <&kp>;
-      //      mods = <(MOD_LALT|MOD_RALT)>;
-      //  };
-        raiseseventest: raiseseventest{
-            compatible = "zmk,behavior-mod-morph";
-            label = "raiseseventest";
-            #binding-cells = <0>;
-            bindings = <&kp>, <&kp>;
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-        MAKE_MOD( raiseseven ,MOD_LSFT|MOD_RSFT, FSLH, LBRC);
-        MAKE_MOD( raiseeight ,MOD_LSFT|MOD_RSFT, LPAR, LBKT);
-        MAKE_MOD( raisenine ,MOD_LSFT|MOD_RSFT, RPAR, RBKT);
-        MAKE_MOD( raisezero ,MOD_LSFT|MOD_RSFT, EQUALS, RBRC);
+        MAKE_MOD( raiseseven ,MOD_LSFT|MOD_RSFT, FSLH, LBRC)
+        MAKE_MOD( raiseeight ,MOD_LSFT|MOD_RSFT, LPAR, LBKT)
+        MAKE_MOD( raisenine ,MOD_LSFT|MOD_RSFT, RPAR, RBKT)
+        MAKE_MOD( raisezero ,MOD_LSFT|MOD_RSFT, EQUALS, RBRC)
         
     };
 };
