@@ -148,7 +148,7 @@
    &kp LSHIFT    &trans       &trans       &trans       &trans       &trans           &trans       &trans             &trans             &aposqmark         &kp FSLH            &kp GRAVE
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼──────────────────┼──────────────────┼──────────────────┼───────────────────┼────────────┤
 // | CTRL        |            |            |  + *       | -   _      |  =         |   |            |                  |  ;               |   :              | ºª                |  ~         |
-   &kp LCTRL     &trans      &trans        &shiftplus   &shiftminus  &kp EQUA         &trans       &trans             &kp SEMICOLON      &kp colon          &kp PIPE            &kp TILDE
+   &kp LCTRL     &trans      &trans        &shiftplus   &shiftminus  &kp EQUAL        &trans       &trans             &kp SEMICOLON      &kp colon          &kp PIPE            &kp TILDE
 // ╰─────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼──────────────────┼──────────────────┼──────────────────┴───────────────────┴────────────╯
 //                                         | ALT        | LWR        | SPC        |   | ENT        | RSE              | GUI              |
                                            &trans       &trans       &trans           &trans       &trans             &trans
