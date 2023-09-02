@@ -18,6 +18,10 @@
     quick-release;
     /delete-property/ ignore-modifiers;
 };
+&lt {
+    tapping-term-ms = <100>;
+};
+
 #define ZMK_HELPER_STRINGIFY(x) #x
 
 #define MAKE_MOD(NAME, MOD, BINDING1, BINDING2) \
