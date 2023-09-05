@@ -98,8 +98,8 @@
 // | TAB        |  1         |  2         |  3         |  4         |  5         |   |  6         |  7         | 8          |  9         |  0         |            |
    &kp TAB      &kp N1       &kp N2       &kp N3       &kp N4       &kp N5           &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// | CAPS       | LFT        | DWN        | UP         | RGT        |            |   | LFT        | DWN        | UP         | RGT        |            | F12        |
-   &kt CAPS     &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none            &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &kp F12
+// | SHIFT      | LFT        | DWN        | UP         | RGT        |            |   | LFT        | DWN        | UP         | RGT        |            | F12        |
+   &kt LSHIFT   &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none            &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &kp F12
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // | CTRL       |            |            |            |            |            |   |            |            |            |            |            |            |
    &kp LCTRL    &none        &none        &none        &none        &none            &none        &none        &none        &none        &none       &none 
@@ -117,8 +117,8 @@
 // | \"|"        |  !         |  @         |  #         |  $         |  %         |   |  &         |  /    {    |     [   (   |    )  ]          |   ? }             |            |
    &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT        &kp AMPS     &raiseseven  &raiseeight   &raisenine         &raisezero          &trans
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┼───────────────────┼────────────┤
-// | SHIFT       |            |            |            |            |            |   |            |            |             |    ' "           | ´`                |  `         |
-   &kp LSHIFT    &none        &none        &none        &none        &none            &none        &none        &none         &aposdqt           &kp FSLH            &kp GRAVE
+// | CAPS        |            |            |            |            |            |   |            |            |             |    ' "           | ´`                |  `         |
+   &kp CAPS      &none        &none        &none        &none        &none            &none        &none        &none         &aposdqt           &kp FSLH            &kp GRAVE
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┼───────────────────┼────────────┤
 // | CTRL        |            |            |  + *       | -   _      |  =         |   |            |            |  ;          |   :              | "|"               |  ~         |
    &kp LCTRL     &none        &none        &shiftplus   &shiftminus  &kp EQUAL        &none        &none        &kp SEMICOLON &kp COLON          &kp PIPE            &kp TILDE
@@ -130,7 +130,7 @@
                 };
 
                 third_layer {
-                  label="THIRD";
+                  label="SYS";
                         bindings = <
 // ╭─────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────────┬────────────┬────────────┬────────────┬────────────╮
 // |C_BRI_DEC    |C_BRI_UP    |            |C_MUTE      |C_VOL_DN    |C_VOL_UP    |   |C_PREV      |C_PLAY_PAUSE    |   C_NEXT   |            |            |            |
