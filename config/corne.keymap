@@ -99,11 +99,11 @@
 // | TAB        |  1         |  2         |  3         |  4         |  5         |   |  6         |  7         | 8          |  9         |  0         |            |
    &kp TAB      &kp N1       &kp N2       &kp N3       &kp N4       &kp N5           &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
-// | SHIFT      | LFT        | DWN        | UP         | RGT        |            |   | LFT        | DWN        | UP         | RGT        |            | F12        |
-   &kp LSHIFT   &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none            &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &kp F12
+// | SHIFT      | LFT        | DWN        | UP         | RGT        |            |   | LFT        | DWN        | UP         | RGT        |            |            |
+   &kp LSHIFT   &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none            &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans       &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // | CTRL       |            |            |            |            |            |   |            |            |            |            |            |            |
-   &kp LCTRL    &none        &none        &none        &none        &none            &none        &none        &none        &none        &none       &none 
+   &kp LCTRL    &trans       &trans       &trans       &trans       &trans           &trans       &trans       &trans       &trans       &trans       &trans 
 // ╰────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┴────────────┴────────────╯
 //                                        | ALT        | LWR        | SPC        |   | ENT        | RSE        | GUI        |
                                           &trans       &trans       &trans           &trans       &trans       &trans
@@ -118,8 +118,8 @@
 // | \"|"        |  !         |  @         |  #         |  $         |  %         |   |  &         |  /    {    |     [   (   |    )  ]          |   ? }             |            |
    &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT        &kp AMPS     &raiseseven  &raiseeight   &raisenine         &raisezero          &trans
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┼───────────────────┼────────────┤
-// | SHIFT       |            |            |            |            |            |   |   INS      |  DELETE    |             |    ' "           | /                 |  `         |
-   &kp LSHIFT    &none        &none        &none        &none        &none            &INS         &DEL        &none         &aposdqt           &kp FSLH            &kp GRAVE
+// | SHIFT       |            |            |            |            |            |   |   INS      |  DELETE    |             |    ' "           |                   |  `         |
+   &kp LSHIFT    &none        &none        &none        &none        &none            &INS         &DEL        &none         &aposdqt           &none                &kp GRAVE
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┼───────────────────┼────────────┤
 // | CTRL        |            |            |  + *       | -   _      |  =         |   |  HOME      |  END       |  ;          |   :              | "|"               |  ~         |
    &kp LCTRL     &none        &none        &shiftplus   &shiftminus  &kp EQUAL        &HOME        &END        &kp SEMICOLON &kp COLON          &kp PIPE            &kp TILDE
@@ -140,8 +140,8 @@
 // |   CAPS      | BT1        | BT2        | BT3        | BT4        |BTCLR       |   |            |                |            |            |            | F12        |
    &kp CAPS      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR       &none        &none            &none        &none        &none        &kp F12
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────────┼────────────┼────────────┼────────────┼────────────┤
-// |    GAME      | F1         | F2         | F3         | F4         | F5         |   | F6         | F7             | F8         | F9         | F10        | F11        |
-   &tog GAME      &kp F1       &kp F2       &kp F3       &kp F4       &kp F5           &kp F6       &kp F7           &kp F8       &kp F9       &kp F10      &kp F11
+// |   GAME      | F1         | F2         | F3         | F4         | F5         |   | F6         | F7             | F8         | F9         | F10        | F11        |
+   &tog GAME     &kp F1       &kp F2       &kp F3       &kp F4       &kp F5           &kp F6       &kp F7           &kp F8       &kp F9       &kp F10      &kp F11
 // ╰─────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────────┼────────────┼────────────┴────────────┴────────────╯
 //                                         | ALT        | LWR        | SPC        |   | ENT        | RSE            | GUI        |
                                            &trans       &trans       &trans           &trans       &trans           &trans
