@@ -118,8 +118,8 @@
 // | \"|"        |  !         |  @         |  #         |  $         |  %         |   |  &         |  /    {    |     [   (   |    )  ]          |   ? }             |            |
    &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT        &kp AMPS     &raiseseven  &raiseeight   &raisenine         &raisezero          &trans
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┼───────────────────┼────────────┤
-// | SHIFT       |            |            |            |            |            |   |   INS      |  DELETE    |             |    ' "           |                   |  `         |
-   &kp LSHIFT    &none        &none        &none        &none        &none            &INS         &DEL        &none         &aposdqt           &none                &kp GRAVE
+// | SHIFT       |   INS      |  DELETE    |    '       |    "       |     `      |   |            |            |             |                  |                   |            |
+   &kp LSHIFT    &kp INS      &kp DEL      &kp APOS     &kp DQT      &kp GRAVE        &none        &none        &none         &none              &none               &none
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┼───────────────────┼────────────┤
 // | CTRL        |            |            |  + *       | -   _      |  =         |   |  HOME      |  END       |  ;          |   :              | "|"               |  ~         |
    &kp LCTRL     &none        &none        &shiftplus   &shiftminus  &kp EQUAL        &HOME        &END        &kp SEMICOLON &kp COLON          &kp PIPE            &kp TILDE
@@ -152,8 +152,8 @@
                   label="GAME";
                         bindings = <
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
-// | ESC        |  Q         |  W         |  E         |  R         |  1         |   |  Y         |  U         |  I         |  O         |  P         | BKSP       |
-   &kp ESC      &kp Q        &kp W        &kp E        &kp R        &kp N1           &kp Y        &kp U        &kp I        &kp O        &kp P        &bspcdel
+// | ESC        |  Q         |  W         |  E         |  R         |  1         |   |  Y         |  U         |  I         |  O         |  P         |            |
+   &kp ESC      &kp Q        &kp W        &kp E        &kp R        &kp N1           &kp Y        &kp U        &kp I        &kp O        &kp P        &trans
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // |SHIFT       |  A         |  S         |  D         |  F         |  2         |   |  H         |  J         |  K         |  L         |  ;         |  '         |
    &kp LSHIFT   &kp A        &kp S        &kp D        &kp F        &kp N2           &kp H        &kp J        &kp K        &kp L        &kp SEMI     &kp SQT
