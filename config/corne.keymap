@@ -79,7 +79,7 @@
                         bindings = <
 // ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮
 // | ESC ALTTAB |  Q         |  W         |  E         |  R         |  T         |   |  Y         |  U         |  I         |  O         |  P         | BKSP       |
-   &escalttab   &kp Q        &kp W        &kp E        &kp R        &kp T            &kp Y        &kp U        &kp I        &kp O        &kp P        &BSPC 
+   &escalttab   &kp Q        &kp W        &kp E        &kp R        &kp T            &kp Y        &kp U        &kp I        &kp O        &kp P        &kp BSPC 
 // ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤
 // |SHIFT       |  A         |  S         |  D         |  F         |  G         |   |  H         |  J         |  K         |  L         |  ;         |  '         |
    &kp LSHIFT   &kp A        &kp S        &kp D        &kp F        &kp G            &kp H        &kp J        &kp K        &kp L        &kp SEMI     &kp SQT
