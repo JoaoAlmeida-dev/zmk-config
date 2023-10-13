@@ -122,7 +122,7 @@
    &kp LSHIFT    &kp INS      &kp DEL      &kp APOS     &kp DQT      &kp GRAVE        &none        &none        &none         &none              &none               &none
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┼───────────────────┼────────────┤
 // | CTRL        |            |            |  + *       | -   _      |  =         |   |  HOME      |  END       |  ;          |   :              | "|"               |  ~         |
-   &kp LCTRL     &none        &none        &shiftplus   &shiftminus  &kp EQUAL        &HOME        &END        &kp SEMICOLON &kp COLON          &kp PIPE            &kp TILDE
+   &kp LCTRL     &none        &none        &shiftplus   &shiftminus  &kp EQUAL        &kp HOME     &kp END      &kp SEMICOLON &kp COLON          &kp PIPE            &kp TILDE
 // ╰─────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┴───────────────────┴────────────╯
 //                                         | ALT        | LWR        | SPC        |   | ENT        | RSE        | GUI         |
                                            &trans       &trans       &trans           &trans       &trans       &trans
