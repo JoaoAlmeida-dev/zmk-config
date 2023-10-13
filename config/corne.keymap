@@ -115,11 +115,11 @@
                   label="HIGHER";
                         bindings = <  
 // ╭─────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬─────────────┬──────────────────┬───────────────────┬────────────╮
-// | \"|"        |  !         |  @         |  #         |  $         |  %         |   |  &         |  /    {    |     [   (   |    )  ]          |   ? }             |            |
-   &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT        &kp AMPS     &raiseseven  &raiseeight   &raisenine         &raisezero          &trans
+// | \"|"        |  !         |  @         |  #         |  $         |  %         |   |  &         |  /    {    |     [   (   |    )  ]          |   ? }             |  DELETE    |
+   &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT        &kp AMPS     &raiseseven  &raiseeight   &raisenine         &raisezero          &kp DEL
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┼───────────────────┼────────────┤
-// | SHIFT       |   INS      |  DELETE    |    '       |    "       |     `      |   |            |            |             |                  |                   |            |
-   &kp LSHIFT    &kp INS      &kp DEL      &kp APOS     &kp DQT      &kp GRAVE        &none        &none        &none         &none              &none               &none
+// | SHIFT       |            |            |    '       |    "       |     `      |   |            |            |             |                  |                   |   INS      |
+   &kp LSHIFT    &none        &none        &kp APOS     &kp DQT      &kp GRAVE        &none        &none        &none         &none              &none               &kp INS
 // ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┼───────────────────┼────────────┤
 // | CTRL        |            |            |  + *       | -   _      |  =         |   |  HOME      |  END       |  ;          |   :              | "|"               |  ~         |
    &kp LCTRL     &none        &none        &shiftplus   &shiftminus  &kp EQUAL        &kp HOME     &kp END      &kp SEMICOLON &kp COLON          &kp PIPE            &kp TILDE
