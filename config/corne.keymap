@@ -40,7 +40,7 @@
         MAKE_MOD(raiseseven, MOD_LSFT|MOD_RSFT, FSLH, LBRC)
         MAKE_MOD(raiseeight, MOD_LSFT|MOD_RSFT, LPAR, LBKT)
         MAKE_MOD(raisenine, MOD_LSFT|MOD_RSFT, RPAR, RBKT)
-        MAKE_MOD(raisezero, MOD_LSFT|MOD_RSFT, RBRC, QMARK)
+        MAKE_MOD(raisezero, MOD_LSFT|MOD_RSFT, QMARK, RBRC)
         
         MAKE_MOD(bspcdel, MOD_LSFT|MOD_RSFT, BSPC, DEL)
         MAKE_MOD(bslshpipe, MOD_LSFT|MOD_RSFT, BSLH, PIPE)
@@ -114,16 +114,16 @@
                 raise_layer {
                   label="HIGHER";
                         bindings = <  
-// ╭─────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬─────────────┬──────────────────┬───────────────────┬────────────╮
-// | \"|"        |  !         |  @         |  #         |  $         |  %         |   |  &         |  /    {    |     [   (   |    )  ]          |   ? }             |            |
-   &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT        &kp AMPS     &raiseseven  &raiseeight   &raisenine         &raisezero          &trans
-// ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┼───────────────────┼────────────┤
-// | SHIFT       |            |    '       |    '       |    "       |     `      |   |   HOME     |   END      |             |                  |                   |   INS      |
-   &kp LSHIFT    &none        &kp APOS     &kp SQT      &kp DQT      &kp GRAVE        &kp HOME     &kp END      &none         &none              &none               &kp INS
-// ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┼───────────────────┼────────────┤
-// | CTRL        |            |            |  + *       | -   _      |  =         |   |            |            |  ;          |   :              | "|"               |  ~         |
-   &kp LCTRL     &none        &none        &shiftplus   &shiftminus  &kp EQUAL        &none        &none        &kp SEMICOLON &kp COLON          &kp PIPE            &kp TILDE
-// ╰─────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼──────────────────┴───────────────────┴────────────╯
+// ╭─────────────┬────────────┬────────────┬────────────┬────────────┬────────────╮   ╭────────────┬────────────┬─────────────┬─────────────┬─────────────┬────────────╮
+// | \"|"        |  !         |  @         |  #         |  $         |  %         |   |  &         |  /    {    |     [   (   |    )  ]     |   ?   }     |            |
+   &bslshpipe    &kp EXCL     &kp AT_SIGN  &kp HASH     &kp DLLR     &kp PRCNT        &kp AMPS     &raiseseven  &raiseeight   &raisenine    &raisezero    &trans
+// ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼─────────────┼─────────────┼────────────┤
+// | SHIFT       |            |    '       |    '       |    "       |     `      |   |   HOME     | PAGE_DOWN  |  PAGE_UP    |   END       |             |   INS      |
+   &kp LSHIFT    &none        &kp APOS     &kp SQT      &kp DQT      &kp GRAVE        &kp HOME     &kp PG_DN    &kp PG_UP     &kp END         &none         &kp INS
+// ├─────────────┼────────────┼────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼─────────────┼─────────────┼────────────┤
+// | CTRL        |            |            |  + *       | -   _      |  =         |   |            |            |  ;          |   :         | "|"         |  ~         |
+   &kp LCTRL     &none        &none        &shiftplus   &shiftminus  &kp EQUAL        &none        &none        &kp SEMICOLON &kp COLON     &kp PIPE      &kp TILDE
+// ╰─────────────┴────────────┴────────────┼────────────┼────────────┼────────────┤   ├────────────┼────────────┼─────────────┼─────────────┴─────────────┴────────────╯
 //                                         | ALT        | LWR        | SPC        |   | ENT        | RSE        | GUI         |
                                            &trans       &trans       &trans           &trans       &trans       &trans
 //                                         ╰────────────┴────────────┴────────────╯   ╰────────────┴────────────┴────────────╯ 
